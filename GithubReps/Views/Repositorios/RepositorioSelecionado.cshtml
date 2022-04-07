@@ -1,0 +1,17 @@
+﻿@using Octokit;
+@model Repository;
+@{
+
+    ViewData["Title"] = Model.Name;
+
+}
+<body style="background-color:#ede5db;">
+<h2>@Model.Name</h2>
+<br />
+<ol>
+     <li>Dono do repositório -- @Model.FullName.Split('/')[0]</li>
+     <li>Linguagem -- @Model.Language</li>
+    <li>Descrição -- @Model.Description</li>
+    <li>Ultima atualização em -- @Model.UpdatedAt</li>
+</ol>
+</body>

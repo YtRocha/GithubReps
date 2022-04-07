@@ -1,0 +1,18 @@
+﻿@using Octokit;
+@model IReadOnlyList<Repository>
+@{
+    ViewData["Title"] = "Meus Repositórios";
+}
+
+<body style="background-color:#ede5db;" link="#e21f5b" vlink="#e21f5b">
+<h2>Meus Repositórios</h2>
+<br/>
+<ol>
+        @{
+            foreach(var rep in Model)
+            {
+                <a href="Repositorios/RepositorioSelecionado?rep=@rep.FullName"><li>@rep.Name</li></a>
+            }
+        }
+</ol>
+</body>
